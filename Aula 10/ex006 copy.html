@@ -1,0 +1,52 @@
+<!--EVENTOS DOM DENTRO DO SCRIPT-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <STYle>
+        body {
+            background-color: black;
+        }
+        #area {
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font: normal 20pt arial;
+            margin: auto;
+        }
+
+    </STYle>
+</head>
+<body>
+    <div id="area"> 
+        Interaja
+    </div>
+    
+<script>
+    var a = document.querySelector('div#area')
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseleave', sair)
+   
+    function clicar () { 
+        a.innerText = "Clicastes"
+        a.style.background = "red"
+    }
+    function entrar () {
+        a.innerText = "Entrastes"
+        a.style.background = "green"
+    }
+    function sair () {
+        a.innerText = "Saistes"
+        a.style.background = "green"
+    }
+</script>
+
+</body>
+</html>
